@@ -1,4 +1,4 @@
-package com.example.xmpp_library.xmpp.chat;
+package com.example.xmpp_library.xmpp.message;
 
 /**
  * Created by bree on 2018/3/22.

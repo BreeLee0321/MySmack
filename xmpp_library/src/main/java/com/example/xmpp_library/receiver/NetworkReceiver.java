@@ -5,8 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 
-import com.example.xmpp_library.constant.Action;
-import com.example.xmpp_library.utils.NetworkUtils;
 
 /**
  * Created by bree on 2018/3/21.

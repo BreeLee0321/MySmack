@@ -6,10 +6,9 @@ import android.os.Bundle;
 import com.example.xmpp_library.XmppManager;
 import com.example.xmpp_library.exception.SmackInvocationException;
 import com.example.xmpp_library.utils.LogUtil;
-import com.example.xmpp_library.xmpp.chat.ReceiveMessageListener;
+import com.example.xmpp_library.utils.Hex;
+import com.example.xmpp_library.xmpp.message.ReceiveMessageListener;
 
-import org.jivesoftware.smack.SmackException;
-import org.jivesoftware.smack.XMPPException;
 import org.jivesoftware.smack.packet.Message;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,11 +33,12 @@ public class MainActivity extends AppCompatActivity {
                        @Override
                        public void onReceive(Object o) {
                            Message message= (Message) o;
-                           LogUtil.e(" "+((Message) o).getBody());
-
+                           LogUtil.i("extension"+message.toString());
+//                           String b = extension.getCmdStr();
+//                           LogUtil.i("extension : "+b);
                        }
                    });
-                   xmppMannger.send("bree02@10.10.2.182","xijianjun@10.10.2.182/Spark","hello!99!");
+                   xmppMannger.sendHexByteArray("bree02@10.10.2.182","xijianjun@10.10.2.182/Spark", Data.bag);
                } catch (SmackInvocationException e) {
                    e.printStackTrace();
                } /*catch (SmackException.NoResponseException e) {

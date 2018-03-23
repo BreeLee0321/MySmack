@@ -11,7 +11,6 @@ public enum State {
 
     DISCONNECTED,
 
-    // this is a state that client is trying to reconnect to server
     WAITING_TO_CONNECT,
 
     WAITING_FOR_NETWORK;

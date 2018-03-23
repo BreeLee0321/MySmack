@@ -4,9 +4,9 @@ package com.example.xmpp_library;
 import android.content.Context;
 
 import com.example.xmpp_library.exception.SmackInvocationException;
-import com.example.xmpp_library.xmpp.chat.ReceiveMessage;
-import com.example.xmpp_library.xmpp.chat.ReceiveMessageListener;
-import com.example.xmpp_library.xmpp.chat.SendMessage;
+import com.example.xmpp_library.xmpp.message.ReceiveMessage;
+import com.example.xmpp_library.xmpp.message.ReceiveMessageListener;
+import com.example.xmpp_library.xmpp.message.SendMessage;
 import com.example.xmpp_library.xmpp.connect.XMPPConnectListener;
 import com.example.xmpp_library.xmpp.connect.XMPPConnection;
 
@@ -97,6 +97,20 @@ public class XmppManager {
         sendManager.send(content);
     }
 
+    /**
+     * 发送字节数组
+     * @param from
+     * @param to
+     * @param content
+     */
+    public void sendHexByteArray(String from,String to,byte[] content){
+        sendManager=new SendMessage(from,to);
+        sendManager.sendHexByteArray(content);
+    }
+    /**
+     * 接受消息监听
+     * @param listener
+     */
     public void setOnMessageReceiveListener(ReceiveMessageListener listener){
         receiveMessage=new ReceiveMessage();
         receiveMessage.setOnReceiveMessageListener(listener);

@@ -1,4 +1,4 @@
-package com.example.xmpp_library.xmpp.chat;
+package com.example.xmpp_library.xmpp.message;
 
 /**
  * Created by bree on 2018/3/22.
@@ -20,5 +20,13 @@ public class SendMessage {
 
     public void send(String content){
        send.send(content);
+    }
+
+    /**
+     * 发送十六进制的字节数组
+     * @param bytes
+     */
+    public void sendHexByteArray(byte[] bytes){
+        send.sendHexByteArray(bytes);
     }
 }

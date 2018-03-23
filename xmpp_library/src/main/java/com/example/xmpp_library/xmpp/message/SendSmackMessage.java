@@ -1,5 +1,6 @@
-package com.example.xmpp_library.xmpp.chat;
+package com.example.xmpp_library.xmpp.message;
 
+import com.example.xmpp_library.utils.Hex;
 import com.example.xmpp_library.utils.LogUtil;
 import com.example.xmpp_library.xmpp.connect.XMPPConnection;
 
@@ -45,6 +46,10 @@ public class SendSmackMessage extends Send {
         initMessage();
     }
 
+    /**
+     * 发送字符串
+     * @param content
+     */
     @Override
     protected void send(String content) {
         try {
@@ -60,6 +65,16 @@ public class SendSmackMessage extends Send {
         }
     }
 
+    /**
+     * 发送字节数组
+     * @param content
+     */
+    @Override
+    protected void sendHexByteArray(byte[] content) {
+
+       send(Hex.byteArrayToHexString(content));
+    }
+
     private Message initMessage(){
         message=new Message();
         message.setTo(to);
@@ -68,3 +83,4 @@ public class SendSmackMessage extends Send {
     }
 
 }
+

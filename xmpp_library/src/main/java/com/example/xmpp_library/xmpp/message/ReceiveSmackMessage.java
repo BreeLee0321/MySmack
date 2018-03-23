@@ -1,4 +1,4 @@
-package com.example.xmpp_library.xmpp.chat;
+package com.example.xmpp_library.xmpp.message;
 
 import com.example.xmpp_library.utils.LogUtil;
 import com.example.xmpp_library.xmpp.connect.XMPPConnection;

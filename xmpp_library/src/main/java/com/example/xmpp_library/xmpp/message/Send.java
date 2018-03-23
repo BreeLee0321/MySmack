@@ -1,4 +1,4 @@
-package com.example.xmpp_library.xmpp.chat;
+package com.example.xmpp_library.xmpp.message;
 
 
 /**
@@ -21,6 +21,15 @@ public abstract class Send {
      * 创建聊天
      */
    protected abstract void creatChat();
+    /**
+     * 发送字符串
+     * @param content
+     */
    protected abstract void send(String content);
+    /**
+     * 发送十六进制的字节数组
+     * @param bs
+     */
+   protected abstract void sendHexByteArray(byte[] bs);
 
 }
