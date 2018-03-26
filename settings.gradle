@@ -1,1 +1,1 @@
-include ':app', ':xmpp_library'
+include ':app', ':xmpp_library', ':comm_library'

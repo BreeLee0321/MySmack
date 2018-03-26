@@ -13,7 +13,7 @@
             android:name=".XmppService"
             android:enabled="true"
             android:exported="true"></service>
-        <receiver android:name="com.example.xmpp_library.receiver.NetworkReceiver" android:exported="false">
+        <receiver android:name="com.example.xmpp_library.comm_library.receiver.NetworkReceiver" android:exported="false">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>

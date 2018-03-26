@@ -3,13 +3,13 @@ package com.example.bree.mysmack;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.xmpp_library.XmppManager;
-import com.example.xmpp_library.exception.SmackInvocationException;
-import com.example.xmpp_library.utils.LogUtil;
-import com.example.xmpp_library.utils.Hex;
-import com.example.xmpp_library.xmpp.message.ReceiveMessageListener;
 
 import org.jivesoftware.smack.packet.Message;
+
+import comm_library.XmppManager;
+import comm_library.exception.SmackInvocationException;
+import comm_library.utils.LogUtil;
+import comm_library.xmpp.message.ReceiveMessageListener;
 
 public class MainActivity extends AppCompatActivity {
 

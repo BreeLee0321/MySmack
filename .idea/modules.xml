@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MySmack.iml" filepath="$PROJECT_DIR$/MySmack.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/comm_library/comm_library.iml" filepath="$PROJECT_DIR$/comm_library/comm_library.iml" />
       <module fileurl="file://$PROJECT_DIR$/xmpp_library/xmpp_library.iml" filepath="$PROJECT_DIR$/xmpp_library/xmpp_library.iml" />
     </modules>
   </component>
